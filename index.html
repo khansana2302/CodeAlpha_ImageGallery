@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery built with HTML, CSS and JavaScript.">
+  <title>Frame & Focus | Image Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Frame and Focus home"><span class="brand-mark">F.</span> frame<span>&</span>focus</a>
+    <p class="header-note">A little collection of beautiful moments</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">VISUAL JOURNAL · 2026</p>
+      <h1>Stories in <em>every frame.</em></h1>
+      <p class="intro-copy">A curated collection of places, details and moments worth remembering.</p>
+    </section>
+
+    <section class="gallery-section" aria-label="Photo gallery">
+      <div class="gallery-toolbar">
+        <div>
+          <h2>Explore the gallery</h2>
+          <p id="photo-count" class="photo-count">12 photographs</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter photographs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+          <button class="filter-btn" data-filter="travel">Travel</button>
+        </div>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with <span aria-label="love">♥</span> · Frame & Focus</p>
+    <p>HTML · CSS · JavaScript</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close-btn" id="close-lightbox" aria-label="Close image viewer">×</button>
+    <button class="nav-btn prev-btn" id="prev-image" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" src="" alt="">
+      <figcaption>
+        <span id="lightbox-title"></span>
+        <span id="lightbox-counter"></span>
+      </figcaption>
+    </figure>
+    <button class="nav-btn next-btn" id="next-image" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
